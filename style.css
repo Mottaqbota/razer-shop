@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans';
+    transition: all .2s ease;
+}
+
+:root {
+    --black: #111111; 
+    --black-light: #1a1a1a; 
+    --white: #f9f5f5;
+    --light-gray: #868686;
+    --gray: #5a5a5a;
+    --principal-color: #0cd82e;
+} 
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--white);
+}
+p {
+    color: var(--light-gray);
+}
+
+body {
+    background: var(--black);
+}
+
+section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+    gap: .5rem;
+    width: 100vw;
+    height: 100vh;
+}
+
+ion-icon {
+    font-size: 18px;
+    color: var(--principal-color);
+}
+
+a {
+    color: var(--principal-color);
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: none;
+    padding: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    color: var(--black);
+    background: var(--principal-color);
+}
+button:hover {
+    cursor: pointer;
+    color: var(--white);
+    outline: solid 2px var(--principal-color);
+    background: transparent;
+}
+button:active {
+    scale: 0.9;
+    color: var(--black);
+    background: var(--principal-color);
+    box-shadow: 0px 0px 12px 0px var(--principal-color);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: .5rem;
+    padding: 1rem;
+    border-bottom: solid 1px var(--gray);
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    width: 250px;
+    padding: 1rem;
+    border-radius: 12px;
+    background: var(--black-light);
+    outline: solid 1px var(--gray);
+}
+
+.card:hover {
+    outline: solid 1px var(--light-gray);
+}
+
+.card h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card header {
+    padding: 0 0 1rem 0;
+}
+
+.box-img {
+    transition: all 1s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    height: 200px;
+}
+
+.box-img:hover .img-principal {
+    display: none;
+}
+.box-img:hover .img-secundaria {
+    animation: showAppears 1s;
+    display: flex;
+}
+
+.img-principal {
+    animation: showAppears 1s;
+    width: 80%;
+}
+
+.img-secundaria {
+    display: none;
+    width: 80%;
+}
+
+@keyframes showAppears {
+    0% {
+        scale: .9;
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+
+.box-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    width: 100%;
+}
+.box-button ion-icon {
+    font-size: 22px;
+}
+.box-button button {
+    width: 100%;
+}
+
