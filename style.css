@@ -118,7 +118,7 @@ header nav a {
 }
 header nav a:hover {
     text-decoration: none;
-    height: 12vh;
+    height: 10vh;
     border-bottom: dotted 2px var(--principal-color);
 }
 
@@ -168,8 +168,12 @@ header nav a:hover {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 1rem;
+    padding: 0rem;
     height: 200px;
+}
+
+.box-img img {
+    width: 100%;
 }
 
 .box-img:hover .img-principal {
